@@ -25,6 +25,8 @@ buildscript {
     repositories {
         google()
         jcenter()
+        //coil kütüphanesi için gerekli kısım
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.2'
