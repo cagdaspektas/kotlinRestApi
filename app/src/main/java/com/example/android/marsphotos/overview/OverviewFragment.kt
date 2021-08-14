@@ -23,6 +23,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.android.marsphotos.databinding.FragmentOverviewBinding
+import com.example.android.marsphotos.databinding.GridViewItemBinding
 
 /**
  * This fragment shows the the status of the Mars photos web services transaction.
@@ -39,7 +40,10 @@ class OverviewFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentOverviewBinding.inflate(inflater)
+        //bu kısımda gridview kısmındakine benzer şekilde çalışır fakat bu fragmentoverviewbinding kullanır
+       val binding =FragmentOverviewBinding.inflate(inflater)
+        //bu kısımda gridview xml de bağladığımız data adapterı gridviewitembindg ile aldık
+       // val binding = GridViewItemBinding.inflate(inflater)
 
         // Allows Data Binding to Observe LiveData with the lifecycle of this Fragment
         binding.lifecycleOwner = this
