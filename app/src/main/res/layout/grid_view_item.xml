@@ -20,18 +20,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <!--
-  ~ data kısmında data binding yapıyoruz burada overviewmodelimizi data tagı içerisine bağladık
+  ~ data kısmında data binding yapıyoruz burada photoyu  data tagı içerisine bağladık
 
   -->
     <data>
-        <variable
-            name="viewModel"
-            type="com.example.android.marsphotos.overview.OverviewViewModel" />
-    </data>
+    <variable
+        name="photo"
+        type="com.example.android.marsphotos.network.MarsPhoto" />
+</data>
+
        
     <ImageView
         android:id="@+id/mars_image"
-        app:imageUrl="@{viewModel.photos.imgSrcUrl}"
+        app:imageUrl="@{photo.imgSrcUrl}"
         android:layout_width="wrap_content"
         android:layout_height="170dp"
         android:scaleType="fitXY"
